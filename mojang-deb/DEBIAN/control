@@ -1,0 +1,8 @@
+Package: mojang-deb
+Version: 1.0
+Section: utils
+Priority: optional
+Architecture: all
+Maintainer: Panzimy (see me on Github: github.com/Panzimy) <neuvadimemail@neuvadejemail.cz>
+Description: Mojang příkaz pro Linux
+ Jednoduchý skript, který jsem vymyslel (není kompletně pravdivý).

@@ -1,0 +1,25 @@
+#!/bin/bash
+
+# Přidání aliasů do /etc/bash.bashrc, pokud tam ještě nejsou
+if ! grep -q "alias Mojang=" /etc/bash.bashrc; then
+    echo 'alias Mojang="/usr/local/bin/Mojang"' >> /etc/bash.bashrc
+    echo 'alias mojang="/usr/local/bin/Mojang"' >> /etc/bash.bashrc
+    echo 'alias MOJANG="/usr/local/bin/Mojang"' >> /etc/bash.bashrc
+fi
+
+if ! grep -q "alias Debian=" /etc/bash.bashrc; then
+    echo 'alias Debian="/usr/local/bin/Debian"' >> /etc/bash.bashrc
+    echo 'alias debian="/usr/local/bin/Debian"' >> /etc/bash.bashrc
+    echo 'alias DEBIAN="/usr/local/bin/Debian"' >> /etc/bash.bashrc
+fi
+
+if ! grep -q "source ~/.bashrc" /etc/bash.bashrc; then
+    echo 'source ~/.bashrc' >> /etc/bash.bashrc
+fi
+
+
+# Načtení změn, aby fungovaly ihned
+source /etc/bash.bashrc
+
+exit 0
+
